@@ -66,20 +66,6 @@ body {
   bottom: 2px;
 }
 
-.nav-item {
-  padding-left: 5px;
-}
-
-.nav-item .nav-link {
-  background-color: #ffc600;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  color: #333 !important;
-}
-
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,7 +119,7 @@ nav {
 
 .btn span {
   display: inline-block;
-  width: 80%;
+  width: 40px;
   height: 4px;
   background-color: #ffc600;
   -webkit-transition: .3s;
@@ -240,7 +226,6 @@ nav {
 }
 
 .drop > a::after {
-  /* position: absolute; */
   display: inline-block;
   content: '';
   width: .5rem;
@@ -386,6 +371,7 @@ nav {
 .logo_wallpaper img {
   max-width: 40%;
   min-width: 180px;
+  max-width: 350px;
 }
 
 .wallpaper_bg {
@@ -771,7 +757,7 @@ nav {
 .contacts__info .contacts__inner .map {
   width: 100%;
   height: 100%;
-  min-height: 300px;
+  max-width: 800px;
   padding: 0 10px 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -781,6 +767,11 @@ nav {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.contacts__info .contacts__inner .map .map_iframe {
+  width: 100%;
+  height: 300px;
 }
 
 .contacts__info .contacts__inner .contacts {
@@ -857,16 +848,6 @@ nav {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.btn-mob,
-#menuMob {
-  display: none;
-}
-
-.phone-mob__li,
-.email-mob__li {
-  display: none;
 }
 
 @media (max-width: 1280px) {
