@@ -4,7 +4,7 @@ body {
 }
 
 .contact__head .contact-head__bg ul, nav, .advantages, .section2 .services, .text, .section4 .fix, .form-contact .form__title, .form-contact .form, .contacts__info .contacts__inner, .wrapper .wrapper__inner {
-  max-width: 1140px;
+  max-width: 1380px;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,9 +12,12 @@ body {
 }
 
 .contact__head .contact-head__bg {
+  position: fixed;
+  width: 100%;
   background-color: #282828;
   width: 100%;
   height: 38px;
+  z-index: 99999;
 }
 
 .contact__head .contact-head__bg img {
@@ -42,6 +45,10 @@ body {
 .contact__head .contact-head__bg ul li a {
   color: #ffc600;
   position: relative;
+}
+
+.menu {
+  padding-top: 38.25px;
 }
 
 .phone__header::before {
@@ -369,7 +376,7 @@ nav {
 }
 
 .logo_wallpaper img {
-  max-width: 40%;
+  width: 100%;
   min-width: 180px;
   max-width: 350px;
 }
@@ -850,6 +857,11 @@ nav {
      object-fit: cover;
 }
 
+.phone-mob__li,
+.email-mob__li {
+  display: none;
+}
+
 @media (max-width: 1280px) {
   .menu nav .menu__inner li .menu__a {
     font-size: 80%;
@@ -934,6 +946,11 @@ nav {
 }
 
 @media (max-width: 640px) {
+  .contact__head .contact-head__bg ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .phone__li,
   .email__li {
     display: none;

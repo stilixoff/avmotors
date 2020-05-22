@@ -6,7 +6,8 @@ $bg-dark: #282828;
 $bg-gold: #ffc600;
 $bg-green: #0190B1;
 $bg-menu: #F0F0F0;
-$width-content: 1140px;
+// $width-content: 1140px;
+$width-content: 1380px;
 $font-size: 18px;
 
 
@@ -24,9 +25,12 @@ body {
 
 .contact__head {
     .contact-head__bg {
+        position: fixed;
+        width: 100%;
         background-color: $bg-dark;
         width: 100%;
         height: 38px;
+        z-index: 99999;
 
         img {
             width: 1rem;
@@ -51,6 +55,10 @@ body {
             }
         }
     }
+}
+
+.menu{
+    padding-top: 38.25px;
 }
 
 .phone__header::before {
@@ -205,7 +213,7 @@ nav {
     margin-top: 3px;
 }
 
-.drop > a::after{
+.drop>a::after {
     display: inline-block;
     content: '';
     width: .5rem;
@@ -219,6 +227,7 @@ nav {
 .drop-menu ul li:first-child {
     margin-top: 0px;
 }
+
 .drop .drop-menu ul li a {
     background-color: $bg-menu;
     font-size: .9rem;
@@ -230,9 +239,9 @@ nav {
     }
 }
 
-@media (max-width:1380px){
+@media (max-width:1380px) {
 
-    .nav-main .link a{
+    .nav-main .link a {
         font-size: .9rem;
     }
 
@@ -240,7 +249,7 @@ nav {
 
 @media (max-width:900px) {
 
-    nav{
+    nav {
         flex-wrap: wrap;
     }
 
@@ -261,7 +270,7 @@ nav {
         margin-top: 10px;
     }
 
-    .nav-main .link{
+    .nav-main .link {
         margin-left: 0;
     }
 
@@ -333,7 +342,7 @@ nav {
 }
 
 .logo_wallpaper img {
-    max-width: 40%;
+    width: 100%;
     min-width: 180px;
     max-width: 350px;
 }
@@ -689,7 +698,8 @@ nav {
                 width: 100%;
                 object-fit: cover;
             }
-            .map_iframe{
+
+            .map_iframe {
                 width: 100%;
                 height: 300px;
             }
@@ -761,6 +771,11 @@ nav {
         width: 100%;
         object-fit: cover;
     }
+}
+
+.phone-mob__li,
+.email-mob__li {
+    display: none;
 }
 
 @media (max-width: 1280px) {
@@ -871,6 +886,10 @@ nav {
 }
 
 @media (max-width: 640px) {
+
+    .contact__head .contact-head__bg ul{
+        justify-content: center;
+    }
 
     .phone__li,
     .email__li {
