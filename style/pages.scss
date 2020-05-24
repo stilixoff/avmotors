@@ -1,0 +1,75 @@
+@import "main.scss";
+
+.post{
+    background-color: $bg-menu;
+}
+
+.nav-post{
+    background-color: $bg-gold;
+    ol{
+        font-weight: bold;
+        .breadcrumb-item a{
+            text-decoration: underline;
+            color: $text-colot-dark;
+        }
+        display: flex;
+        .last{
+            padding-left: 10px;
+            color: $bg-menu;
+        }
+        .last::before{
+            content: '/';
+            padding-right: 10px;
+        }
+    }
+}
+
+.post main{
+    @extend %content_size;
+    color: $text-colot-dark;
+    h1{
+        text-align: center;
+        padding-top: 50px;
+        font-size: 4rem;
+        font-weight: bold;
+        color:$bg-green;
+    }
+    h2{
+        text-align: center;
+        padding-top: 50px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $bg-green;
+    }
+    p{
+        padding-top: 15px;
+    }
+    .main-text{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        line-height: 1.5;
+        .main-img{
+            float: left;
+            max-width: 350px;
+            margin: 0 20px 20px 0; 
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 550px){
+
+    .post main{
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+    
+}
